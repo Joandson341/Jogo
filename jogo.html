@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>💣 Minas da Motivação</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+
+    <h1>💣 Minas da Motivação</h1>
+
+    <div class="painel">
+
+        <div class="card-info">
+            👤 Jogador:
+            <strong id="jogadorAtual">-</strong>
+        </div>
+
+        <div class="card-info">
+            📍 Casa:
+            <strong id="posicaoAtual">0</strong>
+        </div>
+
+        <div class="card-info">
+            ⭐ Pontos:
+            <strong id="pontuacaoAtual">0</strong>
+        </div>
+
+        <div class="card-info">
+            ⏳ Tempo:
+            <strong id="tempo">15</strong>s
+        </div>
+
+    </div>
+
+</header>
+
+<section class="menu">
+
+    <h2>⚙️ Configuração</h2>
+
+    <div class="select-box">
+
+        <label>Modo de jogo</label>
+
+        <select id="modo">
+            <option value="1">🎮 Individual</option>
+            <option value="2">👥 Grupo</option>
+        </select>
+
+    </div>
+
+    <div id="grupoConfig">
+
+        <div class="select-box">
+
+            <label>Quantidade de jogadores</label>
+
+            <select id="quantidadeJogadores">
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+
+        </div>
+
+        <div id="coresJogadores"></div>
+
+    </div>
+
+    <button id="btnComecar">🎮 Começar Partida</button>
+
+</section>
+
+<section class="tabuleiro" id="tabuleiro"></section>
+
+<section class="controle">
+
+    <button id="btnDado">🎲 Jogar Dado</button>
+
+    <div id="dado">0</div>
+
+</section>
+
+<!-- MODAL PERGUNTA -->
+
+<div class="modal" id="modalPergunta">
+
+    <div class="modal-box">
+
+        <h2 id="pergunta"></h2>
+
+        <div class="cronometro-barra">
+            <div id="barraTempo"></div>
+        </div>
+
+        <div class="alternativas">
+
+            <button onclick="responder('A')" id="altA"></button>
+            <button onclick="responder('B')" id="altB"></button>
+            <button onclick="responder('C')" id="altC"></button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MODAL RESULTADO -->
+
+<div class="modal" id="modalResultado">
+
+    <div class="modal-box" id="resultadoBox">
+
+        <h1 id="emojiResultado"></h1>
+
+        <h2 id="textoResultado"></h2>
+
+    </div>
+
+</div>
+
+<!-- MODAL VITÓRIA -->
+
+<div class="modal" id="modalVitoria">
+
+    <div class="modal-box vitoria">
+
+        <h1>🏆 Vitória!</h1>
+
+        <h2 id="mensagemVitoria"></h2>
+
+        <button onclick="reiniciar()">🔄 Jogar Novamente</button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

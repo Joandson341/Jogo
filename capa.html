@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💣 Minas da Motivação</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+    position:relative;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#22c55e33;
+    border-radius:50%;
+    filter:blur(120px);
+    animation:flutuar 6s infinite alternate;
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:#3b82f633;
+    border-radius:50%;
+    filter:blur(120px);
+    right:-120px;
+    bottom:-120px;
+    animation:flutuar2 7s infinite alternate;
+}
+
+.container{
+    width:90%;
+    max-width:750px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(14px);
+    border-radius:35px;
+    padding:50px;
+    text-align:center;
+    color:white;
+    z-index:2;
+    animation:entrada 1s ease;
+    box-shadow:0 0 35px rgba(0,0,0,0.5);
+}
+
+h1{
+    font-size:60px;
+    margin-bottom:25px;
+}
+
+p{
+    color:#cbd5e1;
+    line-height:1.9;
+    font-size:20px;
+    margin-bottom:40px;
+}
+
+button{
+    padding:18px 45px;
+    border:none;
+    border-radius:18px;
+    background:linear-gradient(45deg,#22c55e,#16a34a);
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 25px #22c55e;
+}
+
+@keyframes entrada{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes flutuar{
+    from{transform:translateY(-20px);}
+    to{transform:translateY(25px);}
+}
+
+@keyframes flutuar2{
+    from{transform:translateX(-20px);}
+    to{transform:translateX(30px);}
+}
+
+@media(max-width:700px){
+
+    h1{
+        font-size:42px;
+    }
+
+    p{
+        font-size:17px;
+    }
+
+    button{
+        width:100%;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>💣 Minas da Motivação</h1>
+
+    <p>
+        Avance pelo tabuleiro, responda perguntas sobre motivação no ambiente de trabalho
+        e evite minas escondidas até alcançar a última casa.
+        Mostre seus conhecimentos em liderança, psicologia organizacional,
+        motivação intrínseca, reconhecimento profissional e engajamento.
+    </p>
+
+    <button onclick="iniciar()">🚀 Iniciar Jogo</button>
+
+</div>
+
+<script>
+
+function iniciar(){
+    window.location.href = "jogo.html";
+}
+
+</script>
+
+</body>
+</html>
